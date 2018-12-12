@@ -7,20 +7,81 @@
 	<title></title>
 	<style>
 	
+		.gio {
+			width: 100%;
+			height: 100px;
+			background: red;
+			transform: translateX(500px);
+		}
+		.nika {
+			background: yellow;
+			transform: translateX(-400px);
+		}
+		.luka {
+			background: black;
+			transform: translateX(300px);
+		}
+		.a {
+			background: lime;
+			transform: translateX(-200px);
+		}
+		.go {
+			background: brown;
+			transform: translateX(500px);
+		}
+		.io {
+			background: lightblue;
+			transform: translateX(-100px);
+			animation: luka 1s forwards;
+		}
+		.c {
+			background: darkblue;
+			transform: translateX(400px);
+		}
+		.b {
+			background: red;
+			transform: translateX(-500px);
+		}
+		.zz {
+			background: purple;
+			transform: translateX(300px);
+		}
+		.pp {
+			background: yellow;
+			transform: translateX(-200px);
+		}
 	</style>
 </head>
 <body>
 
-	<div id="body">
-		<div class="circle circle-1"></div>
-		<div class="circle circle-2"></div>
-		<div class="circle circle-3"></div>
-		<div class="circle circle-4"></div>
-		<div class="shoot">
-			<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;" xml:space="preserve"><g><path d="M59,29h-2.025C56.458,14.907,45.093,3.542,31,3.025V1c0-0.553-0.447-1-1-1s-1,0.447-1,1v2.025C14.907,3.542,3.542,14.907,3.025,29H1c-0.553,0-1,0.447-1,1s0.447,1,1,1h2.025C3.542,45.093,14.907,56.458,29,56.975V59c0,0.553,0.447,1,1,1s1-0.447,1-1v-2.025C45.093,56.458,56.458,45.093,56.975,31H59c0.553,0,1-0.447,1-1S59.553,29,59,29z M31,54.975V53c0-0.553-0.447-1-1-1s-1,0.447-1,1v1.975C16.01,54.46,5.54,43.99,5.025,31H7c0.553,0,1-0.447,1-1s-0.447-1-1-1H5.025C5.54,16.01,16.01,5.54,29,5.025V7c0,0.553,0.447,1,1,1s1-0.447,1-1V5.025C43.99,5.54,54.46,16.01,54.975,29H53c-0.553,0-1,0.447-1,1s0.447,1,1,1h1.975C54.46,43.99,43.99,54.46,31,54.975z"/><path d="M42,29h-5.08c-0.441-3.059-2.861-5.479-5.92-5.92V18c0-0.553-0.447-1-1-1s-1,0.447-1,1v5.08c-3.059,0.441-5.479,2.862-5.92,5.92H18c-0.553,0-1,0.447-1,1s0.447,1,1,1h5.08c0.441,3.059,2.861,5.479,5.92,5.92V42c0,0.553,0.447,1,1,1s1-0.447,1-1v-5.08c3.059-0.441,5.479-2.862,5.92-5.92H42c0.553,0,1-0.447,1-1S42.553,29,42,29z M30,35c-2.757,0-5-2.243-5-5s2.243-5,5-5s5,2.243,5,5S32.757,35,30,35z"/></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>
-		</div>
-		<div class="line"></div>
-	</div>
+<header>
+	<p style="font-size: 40px; color: white; padding: 20px;">hello we are developers</p>
+	<div class="stick stick-1"></div>
+	<div class="stick stick-2"></div>
+</header>
+	
+<div class="kfn-anim" data-animation="gio"></div>
+<div class="kfn-anim" data-animation="nika"></div>
+<div class="kfn-anim" data-animation="luka"></div>
+<div class="kfn-anim" data-animation="a"></div>
+<div class="kfn-anim" data-animation="go"></div>
+<div class="kfn-anim" data-animation="io"></div>
+<div class="kfn-anim" data-animation="c"></div>
+<div class="kfn-anim" data-animation="b"></div>
+<div class="kfn-anim" data-animation="zz"></div>
+
+
+<!-- <div class="kfn-anim" data-animation="pp"></div> -->
+
+
+<footer class="kfn-anim" data-animation="fade"></footer>
+
+
+<!-- <div class="your-class">
+  <div style="padding: 50px; background: red; opacity: 1">your content</div>
+  <div style="padding: 50px; background: red; opacity: .5;">fwefe content</div>
+  <div style="padding: 50px; background: purple;"> content</div>
+</div> -->
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="js/slick.min.js"></script>
@@ -30,39 +91,6 @@
 
 
 $(document).ready(function(){
-
-	function getTest() {
-		var a = [-23, 4, -3, 8, -12];
-		var c = [];
-
-		for (var i = 0; i < a.length; i++) {
-			var b = Number(a.slice(i,i + 1)) * Number(a.slice(i + 1 , i + 2));
-			console.log(b)
-			c.push(b);
-		}
-		console.log( Math.max.apply(null, c))
-
-
-	}
-	getTest();
-
-
-	$('.shoot').on('click', function(){
-
-		var a = $('.circle');
-
-		console.log($(a[i]).css('transform'))
-
-		for (var i = 0; i < a.length; i++) {
-			$(a[i]).css('transform')
-			console.log($(a[i]))
-		}
-
-		$('.line').show();
-
-		$('.circle').addClass('active');
-
-	})
 
 	// var a = [ 1 , 3 , 5 , 7 ];
 
@@ -106,100 +134,100 @@ $(document).ready(function(){
 	// console.log(document.querySelector('header p').parentNode.childNodes)
 
 
-	// var kfn_type = function(){
+	var kfn_type = function(){
 
-	// 	var a = document.querySelector('header p');
+		var a = document.querySelector('header p');
 
-	// 	var b = Array.from(a.textContent);
+		var b = Array.from(a.textContent);
 
-	// 	var c = 100;
+		var c = 100;
 
-	// 	var d = b.length;
+		var d = b.length;
 
-	// 	var e = 0;
+		var e = 0;
 
-	// 	var f = a.textContent = '';
+		var f = a.textContent = '';
 
-	// 	setInterval(function(){
+		setInterval(function(){
 
-	// 		d > e ?	a.innerHTML += b[e] : '';
+			d > e ?	a.innerHTML += b[e] : '';
 
-	// 		e++;
+			e++;
 
-	// 	}, 40 ) 
+		}, 40 ) 
 
-	// }
+	}
 
-	// kfn_type();
+	kfn_type();
 
 
-	// var kufuna_anim = function(){
+	var kufuna_anim = function(){
 
-	// 	var a = document.getElementsByClassName('kfn-anim');
+		var a = document.getElementsByClassName('kfn-anim');
 
-	// 	var b = window;
+		var b = window;
 
-	// 	var c = b.scrollY;
+		var c = b.scrollY;
 
-	// 	var q = window.innerHeight;
+		var q = window.innerHeight;
 
-	// 	// console.log(c)
+		// console.log(c)
 
-	// 	for (var i = 0; i < a.length; i++) {
+		for (var i = 0; i < a.length; i++) {
 			
-	// 		var d = a[i].offsetTop;
+			var d = a[i].offsetTop;
 
-	// 		var p = a[i].getAttribute('data-animation')
+			var p = a[i].getAttribute('data-animation')
 
-	// 		var z = window.innerHeight;
+			var z = window.innerHeight;
 
-	// 		if ( c  > d - q  ) {
+			if ( c  > d - q  ) {
 
-	// 			a[i].classList.add('animated' , p);
+				a[i].classList.add('animated' , p);
 
-	// 		} else {
+			} else {
 
-	// 			a[i].classList.remove('animated' , p)
+				a[i].classList.remove('animated' , p)
 
-	// 		}
+			}
 
-	// 	}
+		}
 
-	// }
+	}
 
-	// kufuna_anim();
+	kufuna_anim();
 
-	// window.addEventListener('scroll',kufuna_anim);
+	window.addEventListener('scroll',kufuna_anim);
 
-	// window.addEventListener('resize' , kufuna_anim);
+	window.addEventListener('resize' , kufuna_anim);
 
-	// var contentStick = function(){
+	var contentStick = function(){
 
-	// 	var a = window.scrollY;
+		var a = window.scrollY;
 
-	// 	var b = document.querySelector('footer').offsetTop;
+		var b = document.querySelector('footer').offsetTop;
 
-	// 	var d = window.innerHeight;
+		var d = window.innerHeight;
 
-	// 	var f = document.querySelector('footer').clientHeight;
+		var f = document.querySelector('footer').clientHeight;
 
-	// 	var c = ( a / ( b - (d - f) ) * 100 );
+		var c = ( a / ( b - (d - f) ) * 100 );
 
-	// 	var p = document.querySelector('.stick-1');
+		var p = document.querySelector('.stick-1');
 
-	// 	var q = document.querySelector('.stick-2');
+		var q = document.querySelector('.stick-2');
 
-	// 	p.style.transform = 'translateX(-' + (100 - c) + '%)';
+		p.style.transform = 'translateX(-' + (100 - c) + '%)';
 
-	// 	q.style.transform = 'translateX(' + (100 - c) + '%)';
+		q.style.transform = 'translateX(' + (100 - c) + '%)';
 
-	// }
+	}
 
-	// window.addEventListener('scroll',contentStick);
+	window.addEventListener('scroll',contentStick);
 
-	// window.addEventListener('resize' , contentStick);
+	window.addEventListener('resize' , contentStick);
 
-	// contentStick();
+	contentStick();
 
 
 })
