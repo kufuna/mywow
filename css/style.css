@@ -1,0 +1,148 @@
+body {
+	margin: 0;
+}
+* {
+	box-sizing: border-box;
+}
+div#body {
+	position: absolute;
+	width: 800px;
+	height: 800px;
+	left: 50%;
+	transform: translateX(-50%);
+	margin: 100px auto;
+	border: 1px solid black;
+}
+div.circle {
+	border: 3px solid black;
+	border-radius: 50%;
+	position: absolute;
+	animation: game linear infinite;
+}
+div.circle.active {
+	animation-play-state: paused;
+}
+div.circle-1 {
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	/*animation: game 10s linear infinite;*/
+	animation-duration: 10s;
+	border: 3px solid black;
+	border-radius: 50%;
+	position: absolute;
+}
+div.circle-1:after {
+	content: '';
+	width: 70px;
+	height: 20px;
+	background: white;
+	position: absolute;
+	left: 50%;
+	margin-left: -35px;
+	margin-top: -10px;
+}
+div.circle-2 {
+	width: 90%;
+	height: 90%;
+	top: 5%;
+	left: 5%;
+	/*animation: game2 7.5s linear infinite;*/
+	animation-duration: 7.5s;
+	border: 3px solid black;
+	border-radius: 50%;
+	position: absolute;
+}
+div.circle-2:after {
+	content: '';
+	width: 70px;
+	height: 20px;
+	margin-left: -35px;
+	margin-top: -10px;
+	position: absolute;
+	left: 50%;
+	background: white;
+}
+div.circle-3 {
+	width: 80%;
+	height: 80%;
+	top: 10%;
+	left: 10%;
+	/*animation: game 5s linear infinite;*/
+	animation-duration: 5s;
+	border: 3px solid black;
+	border-radius: 50%;
+	position: absolute;
+}
+div.circle-3:after {
+	content: '';
+	width: 70px;
+	height: 20px;
+	margin-left: -35px;
+	margin-top: -10px;
+	position: absolute;
+	left: 50%;
+	background: white;
+}
+div.circle-4 {
+	width: 70%;
+	height: 70%;
+	top: 15%;
+	left: 15%;
+	/*animation: game2 2.5s linear infinite;*/
+	animation-duration: 2.5s;
+	border: 3px solid black;
+	border-radius: 50%;
+	position: absolute;
+}
+div.circle-4:after {
+	content: '';
+	width: 70px;
+	height: 20px;
+	margin-left: -35px;
+	margin-top: -10px;
+	position: absolute;
+	left: 50%;
+	background: white;
+}
+@keyframes game {
+	100% {
+		transform: rotate(360deg);
+	}
+}
+@keyframes game2 {
+	100% {
+		transform: rotate(-360deg);
+	}
+}
+
+
+div.shoot {
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -25px;
+	margin-left: -25px;
+	cursor: pointer;
+	transition: .5s;
+	z-index: 9;
+}
+div.shoot:hover {
+	transform: scale(1.02);
+}
+div.shoot svg {
+	width: 100%;
+}
+div.line {
+	width: 4px;
+	height: 600px;
+	position: absolute;
+	left: 50%;
+	bottom: 50%;
+	margin-left: -2px;
+	background: red;
+	display: none;
+}
